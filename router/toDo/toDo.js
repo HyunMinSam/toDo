@@ -18,7 +18,7 @@ var cookieParser = require('cookie-parser');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'qkrgusals2',
+  password : 'secret',
   database : 'justToDo',
   port : 3306
 
@@ -28,7 +28,7 @@ connection.connect();
 
 router.use(cookieParser());
 
-var jwtSecret="my_strong_secret";
+var jwtSecret="secret";
 
 router.post('/show',function(req,res){
 
