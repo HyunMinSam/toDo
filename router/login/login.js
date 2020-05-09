@@ -11,7 +11,7 @@ var jwt = require('jsonwebtoken');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'qkrgusals2',
+  password : 'secret',
   database : 'justToDo',
   port : 3306
 
@@ -26,7 +26,7 @@ router.get('/', function(req,res){
 
 });
 //이것 암호화와 숨기는것이 필요한 줄 알았지만 클라에서 처리
-var jwtSecret="my_strong_secret";
+var jwtSecret="secret";
 //유저가 로그인 정보를 보내고 맞으면 토큰발급과 함께 성공.
 //유저가 로그인 정보를 보내고 틀리면 토큰미발급과 함께 비성공.
 router.post('/',function(req,res){
